@@ -3,7 +3,7 @@ package pagamentos;
 import model.MetodoPagamento;
 
 public class Pix implements MetodoPagamento {
-    public static final double TAXA_DESCONTO = 0.02;
+    public static final double TAXA_DESCONTO = 0.05;
 
     @Override
     public double calcularValorFinal(double valorOriginal) {
@@ -16,7 +16,7 @@ public class Pix implements MetodoPagamento {
     public String gerarComprovante(double valorOriginal) {
         return "Pagamento via Pix \n" +
                 "Valor original: R$ " + valorOriginal + "\n" +
-                "Desconto aplicado: " + (TAXA_DESCONTO  * 100) + "\n" +
+                "Desconto aplicado: " + (TAXA_DESCONTO  * 100) + "%\n" +
                 "Valor final: R$ " + calcularValorFinal(valorOriginal) + "\n";
     }
 }

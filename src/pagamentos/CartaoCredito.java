@@ -3,7 +3,7 @@ package pagamentos;
 import model.MetodoPagamento;
 
 public class CartaoCredito implements MetodoPagamento {
-    public static final double TAXA_DE_ACRESCIMO_CREDITO = 0.02;
+    public static final double TAXA_DE_ACRESCIMO_CREDITO = 0.03;
 
     @Override
     public double calcularValorFinal(double valorOriginal) {
@@ -16,7 +16,7 @@ public class CartaoCredito implements MetodoPagamento {
     public String gerarComprovante(double valorOriginal) {
         return "Pagamento via Cartão de Crédito \n" +
                 "Valor original: R$ " + valorOriginal + "\n" +
-                "Acrescimo aplicavel: " + (TAXA_DE_ACRESCIMO_CREDITO  * 100) + "\n" +
+                "Acrescimo aplicado: " + (TAXA_DE_ACRESCIMO_CREDITO  * 100) + "%\n" +
                 "Valor final: R$ " + calcularValorFinal(valorOriginal) + "\n";
     }
 }
