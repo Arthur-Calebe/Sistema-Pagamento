@@ -16,7 +16,7 @@ public class CartaoCredito implements MetodoPagamento {
     public String gerarComprovante(double valorOriginal) {
         return "Pagamento via Cartão de Crédito \n" +
                 "Valor original: R$ " + valorOriginal + "\n" +
-                "Desconto aplicavel: " + (TAXA_DE_ACRESCIMO_CREDITO  * 100) + "\n" +
+                "Acrescimo aplicavel: " + (TAXA_DE_ACRESCIMO_CREDITO  * 100) + "\n" +
                 "Valor final: R$ " + calcularValorFinal(valorOriginal) + "\n";
     }
 }

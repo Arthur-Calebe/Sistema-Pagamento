@@ -16,7 +16,7 @@ public class Pix implements MetodoPagamento {
     public String gerarComprovante(double valorOriginal) {
         return "Pagamento via Pix \n" +
                 "Valor original: R$ " + valorOriginal + "\n" +
-                "Desconto aplicavel: " + (TAXA_DESCONTO  * 100) + "\n" +
+                "Desconto aplicado: " + (TAXA_DESCONTO  * 100) + "\n" +
                 "Valor final: R$ " + calcularValorFinal(valorOriginal) + "\n";
     }
 }
